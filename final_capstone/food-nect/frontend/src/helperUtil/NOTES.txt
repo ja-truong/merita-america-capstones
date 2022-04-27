@@ -1,0 +1,169 @@
+1.  dir: backend: 
+        - PostgreSql
+        - JPA
+        - JWT
+
+2.  dir: frontend: 
+        - react
+        - html
+        - css
+        - react-bootstrap
+        - react-router-dom
+        - axios 
+        - react-tooltip
+
+3.  prioritizing task:
+    high priority: functional signup page (post data to server)
+    high priority: functional login page (get data from server)
+    high priority: successfully redirect to a new page after authentication
+    high priority: functional logout functionality
+    low priority:
+
+4.  fontawesome:
+    npm install --save @fortawesome/free-solid-svg-icons
+    npm install --save @fortawesome/react-fontawesome
+    npm i --save @fortawesome/free-brands-svg-icons
+    ... ... ...
+    import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+    import {faFacebook} from "@fortawesome/free-brands-svg-icons"
+    ... ... ...
+    <FontAwesomeIcon icon="fa-solid fa-bell-on" />
+
+5.  react-icons: https://react-icons.github.io/react-icons
+    npm install react-icons --save
+    import { FaBeer } from 'react-icons/fa';
+    <FaBeer />
+    //react-icons/fa: font awesome
+    //react-icons/ai: ant design
+    //react-icons/bs: bootstrap
+    //react-icons/bi: boxicon   (line icon)
+    //react-icons/di: devicon
+    //react-icons/fi: feather icon 
+    //react-icons/fc: flat icon
+    //react-icons/ga: game icon 
+    //react-icons/go: github icon
+    //react-icons/gr: grommet icon (line icon)
+    //react-icons/hi: hero icon
+    //react-icons/im: icoMoon icon
+    //react-icons/io: icons4 icon
+    //react-icons/io5: icons5 icon
+    //react-icons/md: material design icon
+    //react-icons/ri: remix icon
+    //react-icons/si: simple icon
+    //react-icons/ti: typicon icon
+    //react-icons/vsc: vs code icon
+    //react-icons/wi: weather icon (line icon)
+    //react-icons/cg: css.gg icon (line icon)
+
+5.  axios: https://axios-http.com/
+    import axios form "axios"
+    ... ... ...
+    //GET (no query param) -> "sampele.com/api/users" 
+    const allUsers = async () => {       //when using function use async/await
+        const response = await axios(url);
+        return await response.json();       
+    //note: response.data, 
+    //      response.json, 
+    //      response.status, 
+    //      response.statusText, 
+    //      response.headers
+    }   //set state with returned data for further manipulation or to save
+    //or
+    const data = await axios.get(url)
+        .then(res=> await res)
+        .catch(err=> {
+            //handle error
+            if(err.response){       //response received but not in 2xx range
+                //err.response.data
+                //err.response.status
+                //err.response.headers
+                //err.toJSON
+            } else if(err.request){ //request failed
+                //err.request
+            } else {                //unknown error
+                //err.message
+            }
+        })
+    })
+    //loop over the state
+    //GET (with query params) -> "sample.com/api/user?id=123"
+    axios.get("sample.com/api/user?id=123")
+        .then(res=> res)
+        .catch(err=> err)
+    //or
+    axios.get("sample.com/api/user", {
+        params: {
+                id: 123 //add more params as needed
+            }
+    }).then(res=> res)
+        .catch(err=> err)
+    ... ... ...
+    //POST
+    axios.post(url, payload)    //payload is an object
+        .then(res => {          //post returns the currently added data
+            res.data
+        })
+    //payload: {user: testRef.value}
+    //or
+    //axios.post(
+    //           'url', 
+    //           {"body":data}, 
+    //           { headers: {
+    //               'Content-Type': 'application/json'
+    //           }
+    //})
+    ... ... ... 
+    same syntax for put
+    ... ... ... 
+    axios.delete(url + id)      //"id" of the item to be deleted
+    //to get the reference value from form inputs use "useRef" or use "setState"
+    //const testRef = useRef();
+    //<input type="text" ref={testRef} />
+
+6. status codes: 
+        200: OK
+        201: Created
+        204: No content
+        ...
+        400: Bad request (client error)
+        401: Unauthorized
+        403: Forbidden
+        404: Not found
+        408: Request timeout
+        ...
+        500: Internal server error
+        502: Bad gateway 
+
+7. git:
+    push to new branch: add and stage all changes then: 
+    git clone -b branch_name main_repo_url  => clone specific branch (branch_name), clones the main branch too
+    git pull                                => pull specific branch (git checkout first)
+    git push                                => push to specific branch (git checkout first)
+    git branch -a                           => view all git branches in local machine
+    git checkout branch_name                => switch between local branches (will reflect in IDE immediately)
+    git push origin:branch_name             => origin: the remote repository (origin: main/master, branch_name: new branch name)
+    ... ... ...
+    example:... /food-nect/frontend (surendra) => all pull and push will be sent to branch name = surendra
+
+8. react-router-dom:
+    Use Link to let the user change the URL or useNavigate to do it yourself (like after form submissions)
+    <Link to="/about">About</Link>
+    //if "/" is not present in the "to" property then routes are added to existing routes meaning "xx" then "yy" may become "/xx/yy"
+    ... ... ...
+    Where do I put <BrowserRouter>, <Routes> and <Route path="my-route" element={<ComponentX />} /> ?
+    <BrowserRouter>: 
+        all routes must be inside browser router and there can be only one browser router so place it at root level
+    <Routes>: 
+        all route must be wrapped inside routes. there can be more than one routes and route so you can place them togethere wherever you need the routing
+    <Route>:
+        where you want to render the components
+    ... ... ...
+    <BrowserRouter>
+        <Routes>
+            <Route />
+            <Route />
+        </Routes>
+    </BrowserRouter>
+
+9. 
+

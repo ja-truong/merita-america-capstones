@@ -1,0 +1,78 @@
+/* for View Restaurant**/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 2px;
+    padding: 0;
+}
+
+body {
+    margin: 2rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    grid-gap: 2em;
+    justify-content: center;
+}
+
+.card {
+  overflow: hidden;
+  box-shadow: 10px 10px 30px rgba(0,0,0,0,a);
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+}
+
+.pill-open {
+    background: green;
+}
+
+.pill-closed {
+    background: red;
+}
+
+.cardImg {
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cardTitle {
+    padding: 1rem;
+}
+
+.cardText {
+    padding: 0 1rem;
+}
+
+.cardButton {
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid #d50000;
+    background: transparent;
+    color: #d50000;
+    border-radius: 0.2rem;
+    transition: background 200ms ease-in, color 200ms ease-in;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.cardButton:hover {
+    background: #d50000;
+    color: white;
+}
+
+/* end **/
+

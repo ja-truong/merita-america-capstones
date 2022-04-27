@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  /* background-image: linear-gradient(45deg, #f1f1f1 50%, #76baff 50%); */
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::placeholder {
+  color: #cbcbcb;
+  font-style: italic;
+}
+
+.fn-header-dark {
+  background-color: #495057;
+}
+#header-wrapper-inner {
+  width: 80%;
+}
+.fn-logo {
+  background-color: #d63384;
+  border-radius: 7px;
+  min-width: 60px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fn-text-light-pink {
+  color: #ff43a0;
+}
+
+.fn-signup-signin-wraper {
+  display: flex;
+  flex-grow: 1;
+}
+
+.fn-signup-link {
+  transition: text-decoration 0.5s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+.fn-signup-link:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #ff43a0;
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.fn-signup-link:hover:before {
+  left: 0;
+  width: 100%;
+}
+
+.fn-btn-pink {
+  color: #fff;
+  background-color: #d63384;
+  border-color: #d63384;
+}
+.fn-btn-pink:hover {
+  color: #fff;
+  background-color: #bb2b73;
+  border-color: #b30b5f;
+}
+
+.fn-container-login {
+  display: flex;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 30px 40px;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 0 10px #ebebeb;
+}
+
+.fn-input-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-content: center;
+  text-align: center;
+}
+.fn-input-area input {
+  margin: 10px 0;
+  border: 1px grey solid;
+  border-radius: 3px;
+  padding: 10px;
+  outline: none;
+  color: grey;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+/* fn-signup-link-green: applied to react-router link tag */
+.fn-signup-link-green {
+  display: inline-block;
+}
+
+.fn-signup-link-green a {
+  font-weight: 500;
+  color: #14b397;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.fn-signup-link-green a:active,
+.fn-signup-link-green a:hover {
+  color: #14b397;
+}
+.fn-signup-link-green a:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #14b397;
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.fn-signup-link-green a:hover:before {
+  left: 0;
+  width: 100%;
+}
+
+.fn-curved-svg-wraper {
+  display: none;
+}
+.fn-curved-svg-wraper > img {
+  position: absolute;
+  margin-top: -1px;
+}
+
+#fn-curved-svg {
+  margin-top: -1px;
+  position: absolute;
+  top: 0;
+}
+
+.fn-footer {
+  background-color: #495057;
+  color: #fff;
+}
+.fn-footer > div {
+  position: relative;
+}
+
+.fn-tools-bar {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+.fn-tools-bar li {
+  margin-left: 1rem;
+  color: white;
+  padding: 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.fn-tools-bar li:hover {
+  opacity: 0.7;
+}
+
+.fn-tools-bar svg {
+  height: 35px;
+  width: 35px;
+}
+
+.fn-selected-tool {
+  background-color: #d63384;
+}
+
+.fn-text-petite {
+  margin: 0;
+  font-size: 12px;
+  text-align: left;
+}
+.fn-nav-link {
+  color: #0d6efd;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out;
+}
+.fn-nav-link:hover,
+.fn-nav-link:active {
+  color: #0257d6;
+}
+
+#fn-wraper-container-main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 325px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.fn-footer > p {
+  margin: 0;
+}
+
+.fn-not-found-wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.fn-not-found-wraper img {
+  max-height: 50vh;
+  min-height: 200px;
+}
+.fn-not-found-text {
+  font-size: 2.5rem;
+  color: #00008b;
+}
+.fn-not-found-o {
+  display: inline-block;
+  margin-top: -70px;
+  position: absolute;
+  width: 10px;
+  margin-left: -14px;
+  background-color: #6c63ff;
+}
+.fn-footer-creators {
+  font-size: 10px;
+  margin: 0;
+  color: white;
+}
+@media only screen and (max-device-width: 812px) {
+  .fn-header-dark {
+    background-color: #d63384;
+  }
+  #header-wrapper-inner {
+    width: 100%;
+  }
+  .fn-logo {
+    display: none;
+  }
+  .fn-tools-bar {
+    width: 100%;
+    padding: 0;
+    justify-content: space-between;
+  }
+  .fn-tools-bar li {
+    margin-left: 0;
+  }
+  .fn-container-login {
+    border-radius: 0;
+  }
+  .fn-selected-tool {
+    border-bottom: 3px solid white;
+    box-sizing: border-box;
+  }
+
+  .fn-curved-svg-wraper {
+    display: block;
+  }
+}
+
